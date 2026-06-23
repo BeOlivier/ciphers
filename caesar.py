@@ -1,47 +1,48 @@
 import string
-alphabet_lc = string.ascii_lowercase*2
-alphabet_uc = string.ascii_uppercase*2
+alphabet_lc = string.ascii_lowercase
+alphabet_uc = string.ascii_uppercase
 
 def caesar_encrypt(plaintext, shift):
-    # this function encrypts plaintext to ciphertext
+    # function encrypts plaintext to ciphertext
     # (while preserving original letter casing) using 
-    # old fashioned Caesar cipher and a shift key function 
+    # old fashioned Caesar cipher and a shift key, function 
     # is able to accept large negative and positive shifts
 
     ciphertext = ""
-    shift %= 26
     
     for char in plaintext:
         # switch each LETTER and encrypt to new letter 
         # based on shift
         if char in alphabet_lc:
-            position = alphabet_lc.index(char) + shift
-            ciphertext += alphabet_lc[position]
+            index_new_letter = (alphabet_lc.index(char) + shift) % len(alphabet_lc)
+            ciphertext += alphabet_lc[index_new_letter]
         elif char in alphabet_uc:
-            position = alphabet_uc.index(char) + shift
-            ciphertext += alphabet_uc[position]
+            index_new_letter = (alphabet_uc.index(char) + shift) % len(alphabet_uc)
+            ciphertext += alphabet_uc[index_new_letter]
         else:
-        # this is for special chars and emptyspaces
+        # this is to preserve non-letters
             ciphertext += char
 
     return ciphertext
 
 def caesar_decrypt(ciphertext, shift):
-    # implement the caesar cipher decryption logic here
+    # function decrypts ciphertext to plaintext preserving
+    # original letter casing using Caesar cipher and a known
+    # shift key, also able to accept large negative and positive shifts
+    
     plaintext = ""
-    shift %= 26
     
     for char in ciphertext:
-        # switch each LETTER and encrypt to new letter 
+        # switch each LETTER and decrypt to new letter 
         # based on shift
         if char in alphabet_lc:
-            position = alphabet_lc.index(char) - shift
-            plaintext += alphabet_lc[position]
+            index_new_letter = (alphabet_lc.index(char) - shift) % len(alphabet_lc)
+            plaintext += alphabet_lc[index_new_letter]
         elif char in alphabet_uc:
-            position = alphabet_uc.index(char) - shift
-            plaintext += alphabet_uc[position]
+            index_new_letter = (alphabet_uc.index(char) - shift) % len(alphabet_uc)
+            plaintext += alphabet_uc[index_new_letter]
         else:
-        # this is for special chars and emptyspaces
+        # this is to preserve non-letters
             plaintext += char
 
     return plaintext
