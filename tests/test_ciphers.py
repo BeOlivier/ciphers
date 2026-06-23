@@ -8,7 +8,7 @@ def test_caesar_encrypt_function_exists():
 def test_caesar_decrypt_function_exists():
     assert hasattr(caesar, "caesar_decrypt")
 
-from caesar import caesar_encrypt, caesar_decrypt
+from caesar import caesar_encrypt, caesar_decrypt, caesar_bruteforce
 
 def test_caesar_encrypt():
     assert caesar_encrypt("abc", 1) == "bcd"
@@ -59,3 +59,9 @@ def test_caesar_decrypt():
     assert caesar_decrypt("zab", -27) == "abc"
     assert caesar_decrypt("uvw", -3) == "xyz"
     assert caesar_decrypt("Hfjxfw Hnumjw 101!", 5) == "Caesar Cipher 101!"
+
+def test_caesar_bruteforce():
+    results = caesar_bruteforce("Hfjxfw Hnumjw 101!")
+    assert (5, "Caesar Cipher 101!") in results
+    assert len(results) == 26
+    

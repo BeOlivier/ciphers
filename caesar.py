@@ -50,4 +50,12 @@ def caesar_decrypt(ciphertext, shift):
 def caesar_bruteforce(ciphertext):
     # implement a bruteforce that goes through every 
     # possible shift and returns them all in a list
-    return 0
+    
+    bruteforce = []
+    
+    for i in range(26):
+        bruteforce.append((i, caesar_decrypt(ciphertext, i)))
+        
+    return bruteforce
+
+caesar_bruteforce("iwxh xh p wpgstg ithi%&/()=?+")
