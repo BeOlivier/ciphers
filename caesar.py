@@ -18,8 +18,6 @@ def caesar_encrypt(plaintext, shift):
         else:
         # this is for special chars and emptyspaces
             ciphertext += char
-
-    print(ciphertext)
     return ciphertext
 def caesar_decrypt(ciphertext, shift):
     # implement the caesar cipher decryption logic here
