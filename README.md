@@ -19,17 +19,17 @@ Newest ideas are added at the top, while the earliest foundation tasks stay at t
 
 - [ ] Later: add small self-coded security utilities, such as image/steganography inspection helpers.
 - [ ] Explore simple RSA demos with small, crackable values for learning.
-- [ ] Add brute-force Caesar cracking mode.
 - [ ] Add Vigenere cipher support.
 - [ ] Refactor into clean functions/modules as the project grows.
-- [ ] Add simple tests for cipher behavior.
 - [ ] Add examples to this README.
 - [ ] Add basic error handling for invalid inputs.
-- [ ] Preserve spaces, punctuation, and capitalization where possible.
 - [ ] Add support for custom shift values.
 - [ ] Add terminal input so the user can choose encrypt/decrypt mode.
-- [ ] Implement Caesar cipher decryption.
-- [ ] Implement Caesar cipher encryption.
+- [X] Add brute-force Caesar cracking mode.
+- [X] Add simple tests for cipher behavior.
+- [X] Preserve spaces, punctuation, and capitalization where possible.
+- [X] Implement Caesar cipher decryption.
+- [X] Implement Caesar cipher encryption.
 
 
 ## Development Setup
