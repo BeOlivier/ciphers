@@ -48,14 +48,14 @@ def caesar_decrypt(ciphertext, shift):
     return plaintext
 
 def caesar_bruteforce(ciphertext):
-    # implement a bruteforce that goes through every 
-    # possible shift and returns them all in a list
+    # function gives all possible decryptions
+    # and puts them in a dictionary = {Key: Plaintext}
+    # TODO: Give suggested solutions with analysis of letter frequency and common words
     
     bruteforce = []
     
-    for i in range(26):
-        bruteforce.append((i, caesar_decrypt(ciphertext, i)))
-        
+    for shift in range(26):
+        bruteforce.append({shift: caesar_decrypt(ciphertext, shift)})
     return bruteforce
 
-caesar_bruteforce("iwxh xh p wpgstg ithi%&/()=?+")
+caesar_bruteforce("Iwxh xh p wpgstg ithi%&/()=?+")

@@ -8,8 +8,6 @@ The first version will stay as a command-line tool because it is simpler, cleane
 
 Build a Python-based Caesar cipher tool that can:
 
-- Encrypt text with a chosen shift value.
-- Decrypt text with a chosen shift value.
 - Run from the terminal with clear input/output.
 - Keep the code readable, version-controlled, and professional enough for a public Git repository.
 
@@ -17,7 +15,8 @@ Build a Python-based Caesar cipher tool that can:
 
 Newest ideas are added at the top, while the earliest foundation tasks stay at the bottom.
 
-- [ ] Later: add small self-coded security utilities, such as image/steganography inspection helpers.
+- [ ] Give suggested solutions with bruteforce of Caesar decryption with analysis of letter frequency and common words 
+- [ ] Later: add small self-coded security utilities, such as image steganography inspection helpers.
 - [ ] Explore simple RSA demos with small, crackable values for learning.
 - [ ] Add Vigenere cipher support.
 - [ ] Refactor into clean functions/modules as the project grows.

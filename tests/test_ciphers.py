@@ -62,8 +62,8 @@ def test_caesar_decrypt():
 
 def test_caesar_bruteforce():
     results = caesar_bruteforce("Hfjxfw Hnumjw 101!")
-    assert (5, "Caesar Cipher 101!") in results
+    assert {5: "Caesar Cipher 101!"} in results
     assert len(results) == 26
-    assert results[0] == (0, "Hfjxfw Hnumjw 101!")
-    assert results[-1] == (25, "Igkygx Iovnkx 101!")
-    assert (15, "This is a harder test%&/()=?+") in caesar_bruteforce("Iwxh xh p wpgstg ithi%&/()=?+")
+    assert results[0] == {0: "Hfjxfw Hnumjw 101!"}
+    assert results[-1] == {25: "Igkygx Iovnkx 101!"}
+    assert {15: "This is a harder test%&/()=?+"} in caesar_bruteforce("Iwxh xh p wpgstg ithi%&/()=?+")
