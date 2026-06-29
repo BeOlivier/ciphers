@@ -50,7 +50,6 @@ def caesar_decrypt(ciphertext, shift):
 def caesar_bruteforce(ciphertext):
     # function gives all possible decryptions
     # and puts them in a dictionary = {Key: Plaintext}
-    # TODO: Give suggested solutions with analysis of letter frequency and common words
     
     bruteforce = []
     

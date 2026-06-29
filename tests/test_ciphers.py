@@ -1,4 +1,5 @@
 import caesar
+from caesar import caesar_encrypt, caesar_decrypt, caesar_bruteforce
 
 # Caesar cipher tests
 
@@ -7,8 +8,6 @@ def test_caesar_encrypt_function_exists():
 
 def test_caesar_decrypt_function_exists():
     assert hasattr(caesar, "caesar_decrypt")
-
-from caesar import caesar_encrypt, caesar_decrypt, caesar_bruteforce
 
 def test_caesar_encrypt():
     assert caesar_encrypt("abc", 1) == "bcd"

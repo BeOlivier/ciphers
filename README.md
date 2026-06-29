@@ -33,6 +33,8 @@ Newest ideas are added at the top, while the earliest foundation tasks stay at t
 
 ## Development Setup
 
+Requires at least python 3.14.6
+
 Install development dependencies:
 
 ```bash
